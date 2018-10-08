@@ -14,4 +14,8 @@ def top_up(val)
   @balance += val
  end
 
+def deduct(fare)
+  fail "Not enough funds!" if balance - fare < 0
+  @balance -= fare
+end
 end
